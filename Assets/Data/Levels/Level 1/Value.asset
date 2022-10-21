@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e88250b8c1fe404d8119259aa64a0b7, type: 3}
-  m_Name: Levels
+  m_Script: {fileID: 11500000, guid: 28c76764e8b6bd444aeae37923ddaf54, type: 3}
+  m_Name: Value
   m_EditorClassIdentifier: 
-  list:
-  - {fileID: 11400000, guid: 9e6d8b8eabc67aa41af94938ab5ec5e3, type: 2}
+  value: 0
