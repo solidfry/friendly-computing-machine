@@ -1,55 +1,69 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelData", menuName = "LevelData/New LevelData", order = 0)]
-
-public class LevelData : ScriptableObject
+namespace ScriptableObjects
 {
-    [SerializeField] private string levelName;
+    [CreateAssetMenu(fileName = "LevelData", menuName = "LevelData/New LevelData", order = 0)]
 
-    [SerializeField][TextArea] private string description;
-
-    [SerializeField] bool isComplete;
-    public List<Entry> valuesToTrack;
-    public string LevelName
+    public class LevelData : ScriptableObject
     {
-        get;
-        private set;
-    }
+        [SerializeField] private string levelName;
 
-    public string Description
-    {
-        get;
-        private set;
-    }
+        [SerializeField][TextArea] private string description;
+        [SerializeField] private string levelScene;
+        [SerializeField] bool isComplete;
+        public List<Entry> valuesToTrack;
 
-    public bool IsComplete
-    {
-        get => isComplete;
-        private set
+        public string LevelName
         {
-            isComplete = value;
-            isComplete = valuesToTrack.TrueForAll(v => v.isComplete);
+            get => levelName;
+            private set => levelName = value;
         }
-    }
 
-    [System.Serializable]
-    public class Entry
-    {
-        public Value goal;
-        public Value value;
-        public bool isComplete;
+        public string Description
+        {
+            get => description;
+            private set => description = value;
+        }
+
+        public string LevelScene
+        {
+            get => levelScene;
+            private set => levelScene = value;
+        }
 
         public bool IsComplete
         {
             get => isComplete;
-            set { if (value == goal) isComplete = true; }
+            private set
+            {
+                isComplete = value;
+                isComplete = valuesToTrack.TrueForAll(v => v.isComplete);
+            }
         }
+
+        private void OnValidate()
+        {
+            if (LevelScene == "")
+                LevelScene = LevelName;
+        }
+
+        [System.Serializable]
+        public class Entry
+        {
+            public Value goal;
+            public Value currentValue;
+            public bool isComplete;
+
+            public bool IsComplete
+            {
+                get => isComplete;
+                set => isComplete = value || currentValue == goal;
+            }
+        }
+
+
     }
-
-
 }
 
 

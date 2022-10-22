@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Value : ScriptableObject
+namespace ScriptableObjects
 {
+    public abstract class Value : ScriptableObject
+    {
 
+    }
 }
