@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
   m_Color: {r: 0.05134535, g: 1, b: 0, a: 1}
@@ -218,6 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226817115}
   - component: {fileID: 226817114}
+  - component: {fileID: 226817116}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -259,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226817113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -2.35, z: 0}
+  m_LocalPosition: {x: 5.37, y: -2.35, z: 0}
   m_LocalScale: {x: 2, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,6 +268,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226817116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226817113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868acf680322e5a49be650199cc62beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownAmount: 0.8
+--- !u!4 &242386997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2955471092858911243, guid: 83af3a818bb38344c8d0dfca53544517,
+    type: 3}
+  m_PrefabInstance: {fileID: 2955471091964240452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &932149630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1305974679544424118, guid: 83af3a818bb38344c8d0dfca53544517,
+    type: 3}
+  m_PrefabInstance: {fileID: 2955471091964240452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &932149632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932149630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff2916b88a219945a203ec452c35ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonBarrel: {fileID: 242386997}
+  barrelTip: {fileID: 1923474637}
+  explosionForce: 10
+--- !u!61 &932149633
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932149630}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1032735944
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +418,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1923474636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923474637}
+  m_Layer: 0
+  m_Name: CannonBarrelTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923474637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923474636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.174, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 242386997}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &666475239202823416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,6 +466,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 666475237439638866, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: m_ForceAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 666475237439638866, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 666475237439638866, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: m_UseGlobalAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 666475239276272549, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_Name
@@ -381,7 +494,7 @@ PrefabInstance:
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: -5.63
       objectReference: {fileID: 0}
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
@@ -396,7 +509,7 @@ PrefabInstance:
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
@@ -411,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
@@ -426,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 666475239276272551, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0fa6f9fd47194b49bad1d4ce044acc5, type: 3}
@@ -441,6 +554,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955471091935299181, guid: 83af3a818bb38344c8d0dfca53544517,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955471092849118108, guid: 83af3a818bb38344c8d0dfca53544517,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5187345884436995398, guid: 83af3a818bb38344c8d0dfca53544517,
         type: 3}
@@ -497,6 +620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5514701708146715405, guid: 83af3a818bb38344c8d0dfca53544517,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83af3a818bb38344c8d0dfca53544517, type: 3}
 --- !u!1001 &6786322487498042204
@@ -506,9 +634,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6786322488021646768, guid: 1da12f7d010e53e468fae96c09218129,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6786322488021646773, guid: 1da12f7d010e53e468fae96c09218129,
         type: 3}
       propertyPath: m_Name
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786322488021646773, guid: 1da12f7d010e53e468fae96c09218129,
+        type: 3}
+      propertyPath: m_TagString
       value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6786322488021646775, guid: 1da12f7d010e53e468fae96c09218129,
