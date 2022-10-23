@@ -11,7 +11,7 @@ public class CannonShoot : MonoBehaviour
     {
         if (collision.transform.tag == "Ball")
         {
-            MoveBallToCannonBarrel(collision.gameObject.transform);
+            MoveBallToCannonBarrel(collision.gameObject);
 
             FireBall(collision.gameObject.GetComponent<Rigidbody2D>(), barrelTip);
         }
@@ -19,10 +19,14 @@ public class CannonShoot : MonoBehaviour
 
     Vector2 CalculateForceDirection(Transform tipTransform)
     {
-        return tipTransform.position - cannonBarrel.position;
+        return (tipTransform.position - cannonBarrel.position).normalized;
     }
 
-    void MoveBallToCannonBarrel(Transform ballTransform) => ballTransform.position = barrelTip.position;
+    void MoveBallToCannonBarrel(GameObject ball) 
+    {
+        ball.transform.position = barrelTip.position;
+        ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
 
     void FireBall(Rigidbody2D rb, Transform tipTransform) => rb.AddForce(CalculateForceDirection(tipTransform) * explosionForce, ForceMode2D.Impulse);
 }
