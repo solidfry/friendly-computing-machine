@@ -319,7 +319,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -358,6 +358,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 666475237439638865, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 666475237439638866, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 666475239276272549, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
         type: 3}
       propertyPath: m_Name
@@ -496,41 +506,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6786322487299257328, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257328, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257328, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257335, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257335, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257335, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786322487299257335, guid: 1da12f7d010e53e468fae96c09218129,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6786322488021646773, guid: 1da12f7d010e53e468fae96c09218129,
         type: 3}
       propertyPath: m_Name
