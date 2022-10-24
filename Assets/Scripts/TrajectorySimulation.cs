@@ -22,7 +22,7 @@ public class TrajectorySimulation : MonoBehaviour
     private void Update()
     {
         ResetTrajectory();
-        SimulateTrajectory(gameObject, originalPos, GetComponent<Rigidbody2D>().velocity);
+        SimulateTrajectory(gameObject, originalPos);
 
         foreach (var item in spawnedObjects)
         {
@@ -57,12 +57,10 @@ public class TrajectorySimulation : MonoBehaviour
         }
     }
 
-    public void SimulateTrajectory(GameObject ball, Vector2 pos, Vector2 velocity)
+    public void SimulateTrajectory(GameObject ball, Vector2 pos)
     {
         var ghostObj = Instantiate(ball, pos, Quaternion.identity);
         SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
-
-        ghostObj.GetComponent<Rigidbody2D>().AddForce(velocity);
 
         for (int i = 0; i < maxPhysicsFramesIterations; i++)
         {
