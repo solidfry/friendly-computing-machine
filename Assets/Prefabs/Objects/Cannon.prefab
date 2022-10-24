@@ -107,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonBarrel: {fileID: 2955471092858911243}
   barrelTip: {fileID: 1923474637}
-  explosionForce: 10
-  barrelAngle: 0
+  explosionForce: {fileID: 11400000, guid: 9f391961a60c51049ae3b45c60f7bfae, type: 2}
+  barrelAngle: {fileID: 11400000, guid: e1f4057174c69c64fb07a735ddf01694, type: 2}
 --- !u!1 &2955471091935299171
 GameObject:
   m_ObjectHideFlags: 0
