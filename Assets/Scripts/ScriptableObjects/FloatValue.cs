@@ -6,6 +6,13 @@ namespace ScriptableObjects
 
     public class FloatValue : Value
     {
-        public float value;
+        [SerializeReference] private float value;
+
+        public float Value
+        {
+            get => value;
+            set => this.value = value;
+        }
+        
     }
 }
