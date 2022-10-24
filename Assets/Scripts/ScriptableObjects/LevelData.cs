@@ -51,14 +51,14 @@ namespace ScriptableObjects
         [System.Serializable]
         public class Entry
         {
-            public Value goal;
-            public Value currentValue;
+            public ValueBase<float> goal;
+            public ValueBase<float> currentValueBase;
             public bool isComplete;
 
             public bool IsComplete
             {
                 get => isComplete;
-                set => isComplete = value || currentValue == goal;
+                set => isComplete = value || currentValueBase == goal;
             }
         }
 
