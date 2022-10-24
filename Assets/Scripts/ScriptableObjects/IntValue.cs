@@ -6,6 +6,10 @@ namespace ScriptableObjects
 
     public class IntValue : ValueBase<int>
     {
-        public override int Value { get; set; }
+        public override int Value 
+        {   
+            get => this.value; 
+            set => this.value = value; 
+        }
     }
 }

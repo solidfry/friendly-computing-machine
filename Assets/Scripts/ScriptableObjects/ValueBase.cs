@@ -4,11 +4,11 @@ namespace ScriptableObjects
 {
     public abstract class ValueBase<T> : ScriptableObject
     {
-        [SerializeField] private T value;
+        [SerializeField] public T value;
 
         public virtual T Value
         {
-            get => value;
+            get => this.value;
             set => this.value = value;
         }
     }

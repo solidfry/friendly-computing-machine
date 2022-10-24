@@ -6,6 +6,10 @@ namespace ScriptableObjects
 
     public class FloatValue : ValueBase<float>
     {
-        public override float Value { get; set; }
+        public override float Value
+        {
+            get => this.value; 
+            set => this.value = value;
+        }
     }
 }
