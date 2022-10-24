@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Events;
 
 public class Goal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        GameEvents.LevelFinished += EndLevel;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        GameEvents.LevelFinished -= EndLevel;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Ball")
+        {
+            GameEvents.LevelFinished.Invoke();
+        }
+    }
+
+    void EndLevel()
+    {
+        //Put something here to end the level, Elliot.
     }
 }
