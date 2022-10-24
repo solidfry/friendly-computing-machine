@@ -7,15 +7,29 @@ public class TrajectorySimulation : MonoBehaviour
 {
     private Scene simulationScene;
     private PhysicsScene2D physicsScene;
+    Vector2 originalPos;
     [SerializeField] private Transform obstaclesParent;
     [SerializeField] private LineRenderer line;
     [SerializeField] private int maxPhysicsFramesIterations;
+    private Dictionary<Transform, Transform> spawnedObjects = new Dictionary<Transform, Transform>();
 
     private void Start()
     {
+        originalPos = transform.position;
         CreatePhysicsScene();
+    }
 
-        SimulateTrajectory(gameObject, transform.position, GetComponent<Rigidbody2D>().velocity);
+    private void Update()
+    {
+        ResetTrajectory();
+        SimulateTrajectory(gameObject, originalPos, GetComponent<Rigidbody2D>().velocity);
+
+        foreach (var item in spawnedObjects)
+        {
+            item.Value.position = item.Key.position;
+            item.Value.rotation = item.Key.rotation;
+            item.Value.localScale = item.Key.localScale;
+        }
     }
 
     void CreatePhysicsScene()
@@ -26,8 +40,20 @@ public class TrajectorySimulation : MonoBehaviour
         foreach (Transform obj in obstaclesParent)
         {
             var ghostObj = Instantiate(obj.gameObject, obj.position, obj.rotation);
-            if (ghostObj.GetComponent<Renderer>() != null) { ghostObj.GetComponent<Renderer>().enabled = false; }
+
+            if (ghostObj.GetComponent<SpriteRenderer>() != null)
+            {
+                ghostObj.GetComponent<SpriteRenderer>().enabled = false;
+            } else
+            {
+                SpriteRenderer[] spriteRenderers = ghostObj.GetComponentsInChildren<SpriteRenderer>();
+
+                for (int i = 0; i < spriteRenderers.Length; i++) { spriteRenderers[i].enabled = false; }
+            }
+
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
+
+            if (!ghostObj.isStatic) { spawnedObjects.Add(obj, ghostObj.transform); }
         }
     }
 
@@ -47,4 +73,6 @@ public class TrajectorySimulation : MonoBehaviour
 
         Destroy(ghostObj);
     }
+
+    void ResetTrajectory() => line.positionCount = 0;
 }

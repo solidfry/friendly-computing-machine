@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjects;
 
 public class CannonShoot : MonoBehaviour
 {
     public Transform cannonBarrel, barrelTip;
-    public float explosionForce = 10f;
+    public FloatValue explosionForce;
+    public FloatValue barrelAngle;
+
+    private void Update()
+    {
+        RotateBarrel();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,5 +35,10 @@ public class CannonShoot : MonoBehaviour
         ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
-    void FireBall(Rigidbody2D rb, Transform tipTransform) => rb.AddForce(CalculateForceDirection(tipTransform) * explosionForce, ForceMode2D.Impulse);
+    void FireBall(Rigidbody2D rb, Transform tipTransform) => rb.AddForce(CalculateForceDirection(tipTransform) * explosionForce.Value, ForceMode2D.Impulse);
+
+    void RotateBarrel()
+    {
+        cannonBarrel.rotation = Quaternion.Euler(0f, 0f, barrelAngle.Value);
+    }
 }
