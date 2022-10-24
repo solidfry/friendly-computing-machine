@@ -4,15 +4,8 @@ namespace ScriptableObjects
 {
     [CreateAssetMenu(fileName = "FloatValue", menuName = "Values/New FloatValue", order = 0)]
 
-    public class FloatValue : Value
+    public class FloatValue : ValueBase<float>
     {
-        [SerializeReference] private float value;
-
-        public float Value
-        {
-            get => value;
-            set => this.value = value;
-        }
-        
+        public override float Value { get; set; }
     }
 }

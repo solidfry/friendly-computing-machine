@@ -1,26 +1,30 @@
 using ScriptableObjects;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class QuestionValue : MonoBehaviour
+namespace UI
 {
-
-    [SerializeField] private FloatValue floatValue;
-    [SerializeField] private TMP_InputField currentValueText;
-    private bool _isFloatValueNull;
-
-    private void Start() => _isFloatValueNull = floatValue == null;
-    
-    void Update() => SetValues();
-
-    void SetValues()
+    public class QuestionValue : MonoBehaviour
     {
-        if (_isFloatValueNull)
-            return;
 
-        if (currentValueText.text == "")
-            return;
+        [FormerlySerializedAs("floatValueBase")] [SerializeField] private FloatValue floatValue;
+        [SerializeField] private TMP_InputField currentValueText;
+        private bool _isFloatValueNull;
+
+        private void Start() => _isFloatValueNull = floatValue == null;
+    
+        void Update() => SetValues();
+
+        void SetValues()
+        {
+            if (_isFloatValueNull)
+                return;
+
+            if (currentValueText.text == "")
+                return;
         
-        floatValue.Value = float.Parse(currentValueText.text);
+            floatValue.Value = float.Parse(currentValueText.text);
+        }
     }
 }
