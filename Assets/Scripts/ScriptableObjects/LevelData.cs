@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +9,10 @@ namespace ScriptableObjects
     public class LevelData : ScriptableObject
     {
         [SerializeField] private string levelName;
-
         [SerializeField][TextArea] private string description;
         [SerializeField] private string levelScene;
         [SerializeField] bool isComplete;
-        public List<Entry> valuesToTrack;
+        public List<Entry> valuesToTrack = new();
 
         public string LevelName
         {
@@ -58,7 +58,7 @@ namespace ScriptableObjects
             public bool IsComplete
             {
                 get => isComplete;
-                set => isComplete = value || currentValueBase == goal;
+                set => isComplete = value || Math.Abs(currentValueBase.Value - goal.Value) < .01f;
             }
         }
 
