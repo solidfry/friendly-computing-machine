@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
-  isSpeedBased: 0
+  isSpeedBased: 1
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
@@ -125,8 +125,8 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 300
-  easeType: 6
+  duration: 3
+  easeType: 2
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -151,7 +151,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  loopType: 2
+  loopType: 0
   loops: -1
   id: 
   isRelative: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 40, y: 40, z: 1}
+  endValueV3: {x: 300, y: 300, z: 1}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -179,13 +179,13 @@ MonoBehaviour:
     width: 0
     height: 0
   endValueTransform: {fileID: 0}
-  optionalBool0: 0
+  optionalBool0: 1
   optionalBool1: 0
-  optionalFloat0: 45
+  optionalFloat0: 90
   optionalInt0: 1
   optionalRotationMode: 0
   optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 1
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!114 &4263009232131556118
 MonoBehaviour:
