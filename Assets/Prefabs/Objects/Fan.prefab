@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 666475237439638879}
   - component: {fileID: 666475237439638865}
   - component: {fileID: 666475237439638866}
+  - component: {fileID: 2003349461}
   m_Layer: 0
   m_Name: PushArea
   m_TagString: Untagged
@@ -72,13 +73,26 @@ AreaEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGlobalAngle: 1
-  m_ForceAngle: 0
+  m_UseGlobalAngle: 0
+  m_ForceAngle: 90
   m_ForceMagnitude: 10
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &2003349461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666475237439638878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0476b5566cd3c15449fb502f1668b852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fanMagnitude: {fileID: 11400000, guid: c9633060752b0dd4fb8b95d95549dd84, type: 2}
 --- !u!1 &666475237441986926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5060,7 +5074,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685656578133166754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
