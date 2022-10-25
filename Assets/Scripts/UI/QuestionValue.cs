@@ -23,8 +23,10 @@ namespace UI
 
             if (currentValueText.text == "")
                 return;
-        
-            floatValue.Value = float.Parse(currentValueText.text);
+
+            float i;
+            if(float.TryParse(currentValueText.text, out i ))
+                floatValue.Value = float.Parse(currentValueText.text);
         }
     }
 }

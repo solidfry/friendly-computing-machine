@@ -11,7 +11,7 @@ public class TrajectorySimulation : MonoBehaviour
     [SerializeField] private Transform obstaclesParent;
     [SerializeField] private LineRenderer line;
     [SerializeField] private int maxPhysicsFramesIterations;
-    private Dictionary<Transform, Transform> spawnedObjects = new Dictionary<Transform, Transform>();
+    private Dictionary<Transform, Transform> spawnedObjects = new();
 
     private void Start()
     {
