@@ -6,7 +6,7 @@ namespace Animation
     public class RotateObject : MonoBehaviour
     {
         [Range(0,1)]
-        [SerializeField] private float speed;
+        public float speed;
     
         void Start()
         {
