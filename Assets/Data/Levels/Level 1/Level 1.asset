@@ -18,5 +18,6 @@ MonoBehaviour:
   isComplete: 0
   valuesToTrack:
   - goal: {fileID: 11400000, guid: 804b8d3b222c2ce45a5e67e9da538d95, type: 2}
-    currentValueBase: {fileID: 11400000, guid: 2fce974ffea34bd4d9d8517f66ededb8, type: 2}
+    currentValue: {fileID: 11400000, guid: 2fce974ffea34bd4d9d8517f66ededb8, type: 2}
+    initialValue: {fileID: 11400000, guid: 88c62da5fec201f48a103eff12324a31, type: 2}
     isComplete: 0

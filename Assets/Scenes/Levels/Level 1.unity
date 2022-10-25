@@ -477,17 +477,17 @@ PrefabInstance:
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 1850730012}
   - component: {fileID: 1850730011}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 256
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
@@ -1170,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 453211111605054885, guid: 498087a8d58fc0b4aa25975b55e6bfab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.7
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 453211111605054885, guid: 498087a8d58fc0b4aa25975b55e6bfab,
         type: 3}
@@ -1231,6 +1231,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2024515686135939509, guid: 4d18b8ea82dbc3347af7ba57a1930968,
+        type: 3}
+      propertyPath: endLevelPanel
+      value: 
+      objectReference: {fileID: 170101706580432331, guid: 76588297a627f424b945d378388547b3,
+        type: 3}
     - target: {fileID: 2024515686135939509, guid: 4d18b8ea82dbc3347af7ba57a1930968,
         type: 3}
       propertyPath: startSimulation

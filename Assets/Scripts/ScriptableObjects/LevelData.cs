@@ -48,17 +48,20 @@ namespace ScriptableObjects
                 LevelScene = LevelName;
         }
 
+        public void ResetData() => valuesToTrack.ForEach(e => e.currentValue = e.initialValue);
+        
         [System.Serializable]
         public class Entry
         {
             public ValueBase<float> goal;
-            public ValueBase<float> currentValueBase;
+            public ValueBase<float> currentValue;
+            public ValueBase<float> initialValue;
             public bool isComplete;
 
             public bool IsComplete
             {
                 get => isComplete;
-                set => isComplete = value || Math.Abs(currentValueBase.Value - goal.Value) < .01f;
+                set => isComplete = value || Math.Abs(currentValue.Value - goal.Value) < .01f;
             }
         }
 
