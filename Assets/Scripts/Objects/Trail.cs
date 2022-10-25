@@ -1,31 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Trail : MonoBehaviour
+namespace Objects
 {
-    private LineRenderer lineRenderer;
-    public Transform ballTransform;
-
-    void Start()
+    public class Trail : MonoBehaviour
     {
-        lineRenderer = GetComponent<LineRenderer>();
-    }
+        private LineRenderer lineRenderer;
+        public Transform ballTransform;
 
-    void Update()
-    {
-        DrawLine();
-    }
+        void Start()
+        {
+            lineRenderer = GetComponent<LineRenderer>();
+        }
 
-    void DrawLine()
-    {
-        lineRenderer.positionCount++;
+        void Update()
+        {
+            DrawLine();
+        }
 
-        lineRenderer.SetPosition(lineRenderer.positionCount-1, ballTransform.position);
-    }
+        void DrawLine()
+        {
+            lineRenderer.positionCount++;
 
-    void ResetLine()
-    {
-        lineRenderer.positionCount = 0;
+            lineRenderer.SetPosition(lineRenderer.positionCount-1, ballTransform.position);
+        }
+
+        void ResetLine()
+        {
+            lineRenderer.positionCount = 0;
+        }
     }
 }

@@ -1,30 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Events;
+using UnityEngine;
 
-public class Goal : MonoBehaviour
+namespace Objects
 {
-    private void OnEnable()
+    public class Goal : MonoBehaviour
     {
-        GameEvents.LevelFinished += EndLevel;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.LevelFinished -= EndLevel;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.tag == "Ball")
+        private void OnEnable()
         {
-            GameEvents.LevelFinished.Invoke();
+            GameEvents.onLevelFinishedEvent += EndLevel;
         }
-    }
 
-    void EndLevel()
-    {
-        //Put something here to end the level, Elliot.
+        private void OnDisable()
+        {
+            GameEvents.onLevelFinishedEvent -= EndLevel;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.transform.CompareTag("Ball"))
+            {
+                GameEvents.onLevelFinishedEvent.Invoke();
+            }
+        }
+
+        void EndLevel()
+        {
+            //Put something here to end the level, Elliot.
+        }
     }
 }
