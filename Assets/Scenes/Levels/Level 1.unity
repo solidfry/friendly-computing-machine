@@ -1377,12 +1377,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024515686135939509, guid: 4d18b8ea82dbc3347af7ba57a1930968,
         type: 3}
-      propertyPath: endLevelPanel
-      value: 
-      objectReference: {fileID: 170101706580432331, guid: 76588297a627f424b945d378388547b3,
-        type: 3}
-    - target: {fileID: 2024515686135939509, guid: 4d18b8ea82dbc3347af7ba57a1930968,
-        type: 3}
       propertyPath: startSimulation
       value: 
       objectReference: {fileID: 1131538012}

@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSimulation: {fileID: 0}
-  endLevelPanel: {fileID: 0}
+  endLevelPanel: {fileID: 170101706580432331, guid: 76588297a627f424b945d378388547b3,
+    type: 3}
 --- !u!114 &4378385719155944475
 MonoBehaviour:
   m_ObjectHideFlags: 0
