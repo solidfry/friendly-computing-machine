@@ -9,16 +9,14 @@ namespace Core
     {
         [SerializeField] private Button startSimulation;
         [SerializeField] private Canvas endLevelPanel;
-        private void Awake()
-        {
-            if(startSimulation != null)
-                Time.timeScale = 0;
-        }
+        
+        private void Start() => GameEvents.onBallPauseEvent?.Invoke();
+        
 
         private void OnEnable()
         {
             if (startSimulation != null) 
-                startSimulation.onClick.AddListener(() => Time.timeScale = 1);
+                startSimulation.onClick.AddListener(() => GameEvents.onBallStartEvent?.Invoke());
 
             GameEvents.onLevelFinishedEvent += EndLevel;
         }
