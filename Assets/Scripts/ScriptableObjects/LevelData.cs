@@ -11,7 +11,7 @@ namespace ScriptableObjects
         [SerializeField] private string levelName;
         [SerializeField][TextArea] private string description;
         [SerializeField] private string levelScene;
-        [SerializeField] bool isComplete;
+        [SerializeField] private bool isComplete;
         public List<Entry> valuesToTrack = new();
 
         public string LevelName
@@ -35,11 +35,7 @@ namespace ScriptableObjects
         public bool IsComplete
         {
             get => isComplete;
-            private set
-            {
-                isComplete = value;
-                isComplete = valuesToTrack.TrueForAll(v => v.isComplete);
-            }
+            private set => isComplete = value;
         }
 
         private void OnValidate()
@@ -48,9 +44,25 @@ namespace ScriptableObjects
                 LevelScene = LevelName;
         }
 
-        public void ResetData() => valuesToTrack.ForEach(e => e.currentValue = e.initialValue);
-        
-        [System.Serializable]
+        public void ResetData()
+        {
+            foreach (var e in valuesToTrack)
+            {
+                e.currentValue.Value = e.initialValue.Value;
+                e.IsComplete = false;
+                Debug.Log($"Reset ran. {e.currentValue.Value}");
+            }
+
+            IsComplete = false;
+        }
+
+        public void SetCompleted()
+        {
+            valuesToTrack.ForEach(v => v.SetComplete());
+            IsComplete = valuesToTrack.TrueForAll(v => v.IsComplete);
+        }
+
+        [Serializable]
         public class Entry
         {
             public ValueBase<float> goal;
@@ -61,8 +73,10 @@ namespace ScriptableObjects
             public bool IsComplete
             {
                 get => isComplete;
-                set => isComplete = value || Math.Abs(currentValue.Value - goal.Value) < .01f;
+                set => isComplete = value;
             }
+
+            public void SetComplete() => IsComplete = Math.Abs(currentValue.Value - goal.Value) < .001f;
         }
 
 

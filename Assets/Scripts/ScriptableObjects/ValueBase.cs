@@ -4,7 +4,7 @@ namespace ScriptableObjects
 {
     public abstract class ValueBase<T> : ScriptableObject
     {
-        [SerializeField] public T value;
+        [SerializeField] protected T value;
 
         public virtual T Value
         {

@@ -1,5 +1,9 @@
+using System;
+using System.Collections;
+using Events;
 using ScriptableObjects;
 using UnityEngine;
+using Utility;
 
 namespace Core
 {
@@ -16,6 +20,29 @@ namespace Core
                 return;
             
             levelData.ResetData();
+            StartCoroutine(ResetScene());
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.onLevelFinishedEvent += CheckCompletion;
+        }
+        
+        private void OnDisable()
+        {
+            GameEvents.onLevelFinishedEvent -= CheckCompletion;
+        }
+        
+        private void CheckCompletion()
+        {
+            levelData.SetCompleted();
+            if (levelData.IsComplete) GameEvents.onLevelIsCompletedEvent?.Invoke();
+        }
+
+        IEnumerator ResetScene()
+        {
+            yield return new WaitForSeconds(2f);
+            SceneHelpers.ReloadCurrentScene();
         }
     }
 }

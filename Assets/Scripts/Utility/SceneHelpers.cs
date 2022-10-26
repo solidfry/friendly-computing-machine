@@ -10,6 +10,6 @@ namespace Utility
             SceneManager.LoadScene(sceneToLoad);
         }
 
-        
+        public static void ReloadCurrentScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
