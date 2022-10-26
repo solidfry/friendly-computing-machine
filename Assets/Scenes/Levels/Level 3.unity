@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSimulation: {fileID: 1131538012}
+  endLevelPanel: {fileID: 0}
 --- !u!4 &964918622
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,8 +1185,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4400982078630720674, guid: a0fa6f9fd47194b49bad1d4ce044acc5,
+        type: 3}
+      propertyPath: fanMagnitude
+      value: 
+      objectReference: {fileID: 11400000, guid: c9633060752b0dd4fb8b95d95549dd84,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 2003349461, guid: a0fa6f9fd47194b49bad1d4ce044acc5, type: 3}
+    - {fileID: 4400982078630720674, guid: a0fa6f9fd47194b49bad1d4ce044acc5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0fa6f9fd47194b49bad1d4ce044acc5, type: 3}
 --- !u!1001 &2080784216
 PrefabInstance:

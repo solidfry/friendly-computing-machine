@@ -73,7 +73,7 @@ AreaEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGlobalAngle: 1
+  m_UseGlobalAngle: 0
   m_ForceAngle: 90
   m_ForceMagnitude: 10
   m_ForceVariation: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0476b5566cd3c15449fb502f1668b852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fanMagnitude: {fileID: 0}
+  fanMagnitude: {fileID: 11400000, guid: c9633060752b0dd4fb8b95d95549dd84, type: 2}
 --- !u!1 &666475237441986926
 GameObject:
   m_ObjectHideFlags: 0
