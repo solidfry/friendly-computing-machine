@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level 2
   description: A description of the level and the problem that needs to be solved
-  levelScene: 
+  levelScene: Level 2
   isComplete: 0
   valuesToTrack:
   - goal: {fileID: 11400000, guid: 804b8d3b222c2ce45a5e67e9da538d95, type: 2}
     currentValue: {fileID: 11400000, guid: 1b556ab33d920644ea67c0ad75da5819, type: 2}
+    initialValue: {fileID: 11400000, guid: 7527744e1b7cb854d8adc8fb98fbd596, type: 2}
     isComplete: 0
