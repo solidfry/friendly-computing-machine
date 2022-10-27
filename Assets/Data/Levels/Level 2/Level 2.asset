@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   levelName: Level 2
-  description: A description of the level and the problem that needs to be solved
+  description: Floating in the sky above Earth is a silly little rock we like to
+    call...
   levelScene: Level 2
   isComplete: 0
   valuesToTrack:

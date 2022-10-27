@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 4.unity
     guid: 617a63e8bd4c8fd4fbd8a7a3b819d874
+  - enabled: 1
+    path: Assets/Scenes/ReportCard.unity
+    guid: 4fd4263a57061bc47a9b932b63fc9869
   m_configObjects: {}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Level 4
   m_EditorClassIdentifier: 
   levelName: Level 4
-  description: A description of the level and the problem that needs to be solved
+  description: A lot of hot air here. Welcome to the largest planet in the solar
+    system!
   levelScene: Level 4
   isComplete: 0
   valuesToTrack:
