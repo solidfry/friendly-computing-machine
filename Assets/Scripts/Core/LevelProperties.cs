@@ -18,7 +18,7 @@ namespace Core
         {
             if (levelData == null)
                 return;
-            
+
             levelData.ResetData();
             StartCoroutine(ResetScene());
         }
@@ -27,12 +27,12 @@ namespace Core
         {
             GameEvents.onLevelFinishedEvent += CheckCompletion;
         }
-        
+
         private void OnDisable()
         {
             GameEvents.onLevelFinishedEvent -= CheckCompletion;
         }
-        
+
         private void CheckCompletion()
         {
             levelData.SetCompleted();
