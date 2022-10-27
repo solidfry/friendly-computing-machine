@@ -22,7 +22,7 @@ public class CannonShoot : MonoBehaviour
 
             FireBall(collision.gameObject.GetComponent<Rigidbody2D>(), barrelTip);
 
-            GetComponent<AudioSource>().Play();
+            if (GetComponent<AudioSource>().enabled == true) { GetComponent<AudioSource>().Play(); }
         }
     }
 

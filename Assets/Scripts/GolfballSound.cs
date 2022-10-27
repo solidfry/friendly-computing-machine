@@ -6,6 +6,6 @@ public class GolfballSound : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GetComponent<AudioSource>().Play();
+        if (GetComponent<AudioSource>().enabled == true) { GetComponent<AudioSource>().Play(); }
     }
 }

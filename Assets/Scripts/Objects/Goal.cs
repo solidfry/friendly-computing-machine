@@ -18,7 +18,7 @@ namespace Objects
             if (collision.transform.CompareTag("Ball"))
             {
                 goalCollider.enabled = false;
-                GetComponent<AudioSource>().Play();
+                if (GetComponent<AudioSource>().enabled == true) { GetComponent<AudioSource>().Play(); }
                 GameEvents.onLevelFinishedEvent.Invoke();
             }
         }
