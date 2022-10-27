@@ -32,9 +32,10 @@ namespace ScriptableObjects
             }
         }
 
-        public void CheckAllComplete()
+        public bool CheckAllComplete()
         {
             allLevelsComplete = list.TrueForAll(e => e.IsComplete);
+            return allLevelsComplete;
         }
 
     }

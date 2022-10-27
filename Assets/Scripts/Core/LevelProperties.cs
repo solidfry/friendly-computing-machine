@@ -14,6 +14,7 @@ namespace Core
 
         void Update() => Physics2D.gravity = new Vector2(0, gravity.Value);
 
+
         public void ResetData()
         {
             if (levelData == null)
@@ -25,6 +26,7 @@ namespace Core
 
         private void OnEnable()
         {
+            levelData.ResetData();
             GameEvents.onLevelFinishedEvent += CheckCompletion;
         }
 

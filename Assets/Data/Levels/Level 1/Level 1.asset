@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   levelName: Level 1
-  description: A description of the level and the problem that needs to be solved
+  description: Welcome to your home planet...
   levelScene: Level 1
   isComplete: 0
   valuesToTrack:
