@@ -7,6 +7,7 @@ namespace Objects
     public class Goal : MonoBehaviour
     {
         private Collider2D goalCollider;
+        public GameObject confettiGameObject;
 
         private void Awake()
         {
@@ -17,6 +18,11 @@ namespace Objects
         {
             if (collision.transform.CompareTag("Ball"))
             {
+                foreach (Transform obj in confettiGameObject.transform)
+                {
+                    obj.GetComponent<ParticleSystem>().Play();
+                }
+
                 goalCollider.enabled = false;
                 if (GetComponent<AudioSource>().enabled == true) { GetComponent<AudioSource>().Play(); }
                 GameEvents.onLevelFinishedEvent.Invoke();
