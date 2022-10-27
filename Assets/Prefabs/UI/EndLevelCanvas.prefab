@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 170101706580432331}
   - component: {fileID: 7138453187032199369}
   - component: {fileID: 6550315866656339785}
+  - component: {fileID: 7338992820694918102}
   m_Layer: 5
   m_Name: EndLevelCanvas
   m_TagString: Untagged
@@ -101,6 +102,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7338992820694918102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758170270178301886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf0f59010472454c92ab1aea98248fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: {fileID: 11400000, guid: 00aae1ba3a4d130488298c35f2d93da5, type: 2}
+  button: {fileID: 6013473550646339090}
 --- !u!1001 &4448121177735673010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,3 +266,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4448121177735673010}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6013473550646339090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7984531333792191136, guid: 57173d76cbaf7f74cbf7651dc42ba2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4448121177735673010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
