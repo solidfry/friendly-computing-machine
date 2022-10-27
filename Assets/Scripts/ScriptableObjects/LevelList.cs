@@ -8,6 +8,7 @@ namespace ScriptableObjects
     public class LevelList : ScriptableObject
     {
         public List<LevelData> list;
+        public bool allLevelsComplete;
 
         public string GetNextLevel()
         {
@@ -16,7 +17,8 @@ namespace ScriptableObjects
                 string currentScene = SceneManager.GetActiveScene().name;
                 int sceneNumber = int.Parse(currentScene.Split(" ")[1]);
                 Debug.Log(sceneNumber + 1);
-                return sceneNumber <= list.Count ? $"Level {sceneNumber + 1}" : "LevelSelect";
+                Debug.Log($" List count is {list.Count}");
+                return sceneNumber <= list.Count - 1 ? $"Level {sceneNumber + 1}" : "LevelSelect";
             }
 
             return "LevelSelect";
@@ -29,5 +31,11 @@ namespace ScriptableObjects
                 i.ResetData();
             }
         }
+
+        public void CheckAllComplete()
+        {
+            allLevelsComplete = list.TrueForAll(e => e.IsComplete);
+        }
+
     }
 }

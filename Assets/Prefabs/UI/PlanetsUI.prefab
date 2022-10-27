@@ -799,17 +799,17 @@ PrefabInstance:
     - target: {fileID: 8101503291808690538, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: PlanetReferenceButton
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
@@ -819,7 +819,7 @@ PrefabInstance:
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
@@ -829,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
@@ -884,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -256
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8101503291808690539, guid: c306d22ce65ee0349ace2a48e207c3ae,
         type: 3}
