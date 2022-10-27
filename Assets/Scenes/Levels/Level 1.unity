@@ -1058,6 +1058,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348897032154162338, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897032154162338, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897032154162338, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1065,6 +1075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897033025821368, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_text
+      value: The gravity of the Earth is
       objectReference: {fileID: 0}
     - target: {fileID: 3348897033025821369, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
@@ -1074,6 +1089,16 @@ PrefabInstance:
     - target: {fileID: 3348897033025821369, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897033025821369, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897033025821369, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348897033025821369, guid: 5050ff379c55dee48b673e5aae6f9218,
@@ -1135,7 +1160,7 @@ PrefabInstance:
     - target: {fileID: 3348897033296366183, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3348897033296366183, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
@@ -1210,6 +1235,16 @@ PrefabInstance:
     - target: {fileID: 3348897034092895160, guid: 5050ff379c55dee48b673e5aae6f9218,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897034092895160, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348897034092895160, guid: 5050ff379c55dee48b673e5aae6f9218,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348897034092895160, guid: 5050ff379c55dee48b673e5aae6f9218,
