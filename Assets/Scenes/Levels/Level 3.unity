@@ -314,7 +314,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fanMagnitude
       value: 
-      objectReference: {fileID: 11400000, guid: 1d3e0196bace8ab4ea3b3aed6f9ab12a,
+      objectReference: {fileID: 11400000, guid: c9633060752b0dd4fb8b95d95549dd84,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0fa6f9fd47194b49bad1d4ce044acc5, type: 3}
@@ -1109,7 +1109,7 @@ PrefabInstance:
     - target: {fileID: 7636023349667065822, guid: 49a51cd7dca6198488b4e080e5da9d84,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7636023349667065822, guid: 49a51cd7dca6198488b4e080e5da9d84,
         type: 3}
