@@ -53,6 +53,11 @@ namespace Objects
                     for (int i = 0; i < spriteRenderers.Length; i++) { spriteRenderers[i].enabled = false; }
                 }
 
+                if (ghostObj.GetComponent<AudioSource>() != null)
+                {
+                    ghostObj.GetComponent<AudioSource>().enabled = false;
+                }
+
                 SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
 
                 if (!ghostObj.isStatic) { spawnedObjects.Add(obj, ghostObj.transform); }
