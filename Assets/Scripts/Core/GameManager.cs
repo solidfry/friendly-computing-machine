@@ -17,13 +17,13 @@ namespace Core
             set
             {
                 levelCompleted = value;
-                if(levelCompleted) EndLevel();
+                if (levelCompleted) EndLevel();
             }
         }
-        
+
         private void OnEnable()
         {
-            if (startSimulation != null) 
+            if (startSimulation != null)
                 startSimulation.onClick.AddListener(() => GameEvents.onBallStartEvent?.Invoke());
 
             GameEvents.onLevelIsCompletedEvent += IsLevelCompleted;
@@ -32,10 +32,10 @@ namespace Core
 
         private void IsLevelCompleted()
         {
-            Debug.Log($"LevelCompleted is {LevelCompleted}"); 
-            LevelCompleted = true; 
+            Debug.Log($"LevelCompleted is {LevelCompleted}");
+            LevelCompleted = true;
         }
-        
+
         private void EndLevel() => Instantiate(endLevelPanel);
     }
 }
