@@ -21,6 +21,8 @@ public class CannonShoot : MonoBehaviour
             MoveBallToCannonBarrel(collision.gameObject);
 
             FireBall(collision.gameObject.GetComponent<Rigidbody2D>(), barrelTip);
+
+            GetComponent<AudioSource>().Play();
         }
     }
 
