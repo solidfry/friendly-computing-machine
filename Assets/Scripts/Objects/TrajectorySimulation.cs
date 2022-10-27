@@ -8,6 +8,7 @@ namespace Objects
     {
         private Scene simulationScene;
         private PhysicsScene2D physicsScene;
+        public GameObject ghostBall;
         Vector2 originalPos;
         [SerializeField] private Transform obstaclesParent;
         [SerializeField] private LineRenderer line;
@@ -60,7 +61,7 @@ namespace Objects
 
         public void SimulateTrajectory(GameObject ball, Vector2 pos)
         {
-            var ghostObj = Instantiate(ball, pos, Quaternion.identity);
+            var ghostObj = Instantiate(ghostBall, pos, Quaternion.identity);
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
 
             for (int i = 0; i < maxPhysicsFramesIterations; i++)

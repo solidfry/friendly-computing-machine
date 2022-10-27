@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c76764e8b6bd444aeae37923ddaf54, type: 3}
   m_Name: Level3Gravity
   m_EditorClassIdentifier: 
-  value: -3.721
+  value: -3.72
